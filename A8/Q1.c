@@ -36,14 +36,17 @@ void quickSort(int arr[], int low, int high) {
 // Function to print an array
 void printArray(int arr[], int size) {
     for (int i = 0; i < size; i++) {
-        printf("%d ", arr[i]);
+        printf("%d ",arr[i]);
     }
     printf("\n");
 }
 
 int main() {
-    int arr[] = {10, 7, 8, 9, 1, 5};
+    int arr[] = {1,2,3};
     int n = sizeof(arr) / sizeof(arr[0]);
+    for(int i = 0 ; i < n ; i++){
+        scanf(" %d",&arr[i]);
+    }
     printf("Unsorted array: \n");
     printArray(arr, n);
     quickSort(arr, 0, n - 1);
