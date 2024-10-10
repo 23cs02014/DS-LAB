@@ -1,3 +1,3 @@
-gcc filename.c
-./a.out
-dont forget commit message
+gcc filename.c  
+./a.out  
+dont forget commit message  
