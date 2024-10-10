@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include<limits.h>
 
+//test push
 int getMax(int arr[], int n)
 {
 	int mx = arr[0];
