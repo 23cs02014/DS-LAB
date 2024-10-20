@@ -14,6 +14,13 @@ int main(){
     for(int i = 0 ; i < n ; i++){
         scanf(" %d", &b[i]);
     }
-    
+    int f[2][n];
+    for(int i = 0 ; i < n ; i++){
+        for(int j = 0 ; j < n ; j++){
+            if(f[0][j]==a[i]){
+                
+            }
+        }
+    }
 
 }

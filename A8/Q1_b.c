@@ -14,13 +14,5 @@ int main(){
     printf("Enter K:");
     int k;
     scanf(" %d",&k);
-    for(int i = 0 ; i < n ; i++){
-        for(int j = i + 1 ; j < n ; j++){
-            for(int l = j + 1 ; l < n ; l++){
-                if(a[i]+a[j]+a[l] == k){
-                    printf("%d %d %d \n", a[i],a[j],a[l]);
-                }
-            }
-        }
-    }
+   
 }
