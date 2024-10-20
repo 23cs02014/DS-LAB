@@ -40,7 +40,7 @@ void merge(int arr[], int l, int m, int r)
     }
 
     // Copy the remaining elements of R[],
-    // if there are any
+    // if there are any 
     while (j < n2) {
         arr[k] = R[j];
         j++;
@@ -81,10 +81,10 @@ int main(){
     mergeSort(b,0,n-1);
     for(int i = 0 ; i < n ; i++){
         if(a[i]!=b[i]){
-            printf("Not Same Set\n");
+            printf("Diff\n");
             return 0;
         }
     }
-    printf("Same Set\n");
+    printf("Same\n");
 
 }

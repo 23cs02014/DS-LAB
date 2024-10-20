@@ -1,4 +1,26 @@
 #include<stdio.h>
+#include<stdlib.h>
+#include<stdbool.h>
+
+
+int countOccurrences(int arr[], int n, int element) {
+    int count = 0;
+    for (int i = 0; i < n; i++) {
+        if (arr[i] == element) {
+            count++;
+        }
+    }
+    return count;
+}
+
+_Bool checkSameElements(int a[], int b[], int n) {
+    for (int i = 0; i < n; i++) {
+        if (countOccurrences(a, n, a[i])!= countOccurrences(b, n, a[i])) {
+            return false;
+        }
+    }
+    return true;
+}
 
 int main(){
     printf("Enter n:");
@@ -14,13 +36,11 @@ int main(){
     for(int i = 0 ; i < n ; i++){
         scanf(" %d", &b[i]);
     }
-    int f[2][n];
-    for(int i = 0 ; i < n ; i++){
-        for(int j = 0 ; j < n ; j++){
-            if(f[0][j]==a[i]){
-                
-            }
-        }
+    if(checkSameElements(a, b, n)){
+        printf("Same\n");
+    }
+    else{
+        printf("Diff\n");
     }
 
-}
+} 
