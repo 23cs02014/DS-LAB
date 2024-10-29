@@ -5,7 +5,7 @@ void swap(int* a, int* b)
 
     int temp = *a;
     *a = *b;
-    *b = temp;
+    *b = temp; 
 }
 void Karyheapify(int n , int k , int a[n]){
 
