@@ -1,21 +1,33 @@
-#include<stdio.h>
+#include <stdio.h>
 
-void swap(int* a, int* b)
-{
-
+void swap(int* a, int* b) {
     int temp = *a;
     *a = *b;
-    *b = temp; 
+    *b = temp;
 }
-void Karyheapify(int n , int k , int a[n]){
 
-}
-void printArr(int n,int a[n]){
-    for(int i = 0 ; i < n ; i++){
-        printf("%d ",a[i]);
+void Karyheapify(int n, int k, int a[n], int i) {
+    int largest = i;
+    for (int j = 1; j <= k; j++) {
+        int child = k * i + j;
+        if (child < n && a[child] > a[largest]) {
+            largest = child;
+        }
+    }
+    if (largest != i) {
+        swap(&a[i], &a[largest]);
+        Karyheapify(n, k, a, largest);
     }
 }
-int main(){
+
+void printArr(int n, int a[n]) {
+    for (int i = 0; i < n; i++) {
+        printf("%d ", a[i]);
+    }
+    printf("\n");
+}
+
+int main() {
     printf("Enter K:");
     int k;
     scanf("%d", &k);
@@ -24,11 +36,12 @@ int main(){
     scanf("%d", &n);
     int a[n];
     printf("Enter the elements:");
-    for(int i = 0 ; i < n ; i++){
-        scanf(" %d",&a[i]);
+    for (int i = 0; i < n; i++) {
+        scanf("%d", &a[i]);
     }
-    for(int i = n/k - 1; i >= 0; i--){
-        Karyheapify(n,i,a);
+    for (int i = (n - 1) / k; i >= 0; i--) {
+        Karyheapify(n, k, a, i);
     }
-    printArr(n,a);
+    printArr(n, a);
+    return 0;
 }

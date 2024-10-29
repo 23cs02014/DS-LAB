@@ -69,13 +69,13 @@ int main() {
     }
 
     printf("count: %d\n", count);
-
+int state = 1;
     for (int i = 0; i < n; i++) {
         if (f[i] > 0) {
-            printf("Set %d: ", i);
+            printf("State %d: ", state++);
             for (int j = 0; j < n; j++) {
                 if (root(set, j) == i) {
-                    printf("%d ", j);
+                    printf("C%d ", j);
                 }
             }
             printf("\n");
